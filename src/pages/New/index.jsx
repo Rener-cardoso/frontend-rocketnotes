@@ -29,6 +29,9 @@ export function New() {
   }
 
   function handleAddLink() {
+    if(newLink === "") {
+      return alert("Não pode ser adicionado um campo vazio.")
+    }
     setLinks(prevState => [...prevState, newLink]);
     setNewLink("");
   }
@@ -38,6 +41,9 @@ export function New() {
   }
 
   function handleAddTag() {
+    if(newTag === "") {
+      return alert("Não pode ser adicionado um campo vazio.")
+    }
     setTags(prevState => [...prevState, newTag]);
     setNewTag("");
   }
